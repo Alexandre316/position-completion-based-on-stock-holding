@@ -1,0 +1,17 @@
+IndValueToFundNAV:每期报告行业占基金净值比
+ChinaMutualFundStockPortfolio:组合持仓的报告期数据
+StkValuetToFundNAV:基金股票资产占比
+IndustryValueToNAV:每期报告行业占基金净值比
+StkActualPublishDate:股票公告实际发布日期
+FundActualPublishDate:基金公告实际发布日期
+MonthBeginEnd:月初月末表
+StkIndustry:股票行业归属
+FundType:基金类型
+PctStkTotalNAV:基金股票投资总净值
+FundFullName:基金简称和基金全称
+StkBondFundList:偏股混合型基金列表
+StkFundList:普通股票型基金列表
+AShareEODPricesPivot:A股所有股票的收盘价
+LeftStkPricePivot:补充的股票收盘价
+IncomeTTM:用作自下而上的单因子策略的因子，未必是有效的因子
+BaseIndex:偏股混合型基金指数，基准
