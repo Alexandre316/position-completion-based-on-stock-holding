@@ -1,1 +1,2 @@
 Data/ChinaMutualFundStockPortfolio.csv filter=lfs diff=lfs merge=lfs -text
+Data/ChinaMutualFundNAV.csv filter=lfs diff=lfs merge=lfs -text
