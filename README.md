@@ -42,5 +42,5 @@ Although some results are not satisfactory, most simulated NAVs are so similar t
 ## Defects and Improvements
 
 - We complete the position based on stocks only, which means other asset types are excluded (bonds, etc).  There might be a huge gap between the real net-value and the net-value derived from the simulated weights of stock in the portfolio occasionally, but they have a high spearman correlation most of the time. 
-- Buys and sells of portfolio manager should be chased. However, I suppose the $w_{i,t}$ is constant. 
+- Buys and sells of portfolio manager should be chased. However, I suppose the ![](http://latex.codecogs.com/gif.latex?\\w_{i,t}) is constant. 
 
