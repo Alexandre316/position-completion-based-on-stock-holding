@@ -1,8 +1,8 @@
-# Position Completion Based on 
+# Position Completion Based on Stock Holding
 
 ## Data Description
 
-In China, mutual fund reports are published seasonally. However, complete position would not be reported except annual report and semi annual report. In the first and third season, top 10 heavyweight stocks and industry distribution is the information you can get. In the position chasing, invisible trading ability estimation, a complete position is must.
+In China, a mutual fund reports are published seasonally. However, complete position would not be reported except annual report and semi annual report. In 1st and 3rd season, top 10 heavyweight stocks and industry distribution is the only information we can get. In some research (position chasing, invisible trading ability evaluation, etc), a complete position is must.
 
 - IndValueToFundNAV:每期报告行业占基金净值比
 - ChinaMutualFundStockPortfolio:组合持仓的报告期数据
@@ -24,12 +24,12 @@ In China, mutual fund reports are published seasonally. However, complete positi
 
 ## Method
 
-- For 1st or 3rd season,  $\omega_{i,t}$ is the simulated proportion of each stock (for $i$ = 1...10, the exact proportion is know), and $E_{t}$ is the holding information. 
-- For $t-1$, complete position can be obtained ($E_{t-1}$ is known), and we have those in $E_{t-1}$ but not in $E_t$(for $t$ from 1 to 10), denotes $e_t$. This is the stocks we need to allocate proportion to.
-- Denotes $I_{t,j}$ is the net value of industry $j$ divided by the net value of portfolio in $t-1$
-- According to 
-- 
-- 
+- For 2nd and 4th season, we have the proportion of net stock value in the net value of its industry for each stock;
+- For 1st and 3rd season, the proportion of all industries in the net fund value minus the corresponding industry net value of the top ten heavyweight stocks, and the rest is the industry net value of the non top ten heavyweight stocks, which is the net value to be distributed;
+- In the whole position of the previous quarter, those that are not among the top ten heavy positions of the current quarter are regarded as the positions of non top ten heavy positions of the current quarter;
+- The remaining industry net value (i.e. net value to be distributed in 2) after subtracting the top ten heavy positions in this quarter is scaled and distributed to 3 according to the industry net value of stocks in 1;
+- The sum of all equity positions would not reach 100%, and the remaining positions will be filled with H11001.CSI(bond index);
+- We evaluate the results according to Spearman Corr;
 
 ## Compare the Real and Simulated NAV
 
@@ -42,5 +42,5 @@ Although some results are not satisfactory, most simulated NAVs are so similar t
 ## Defects and Improvements
 
 - We complete the position based on stocks only, which means other asset types are excluded (bonds, etc).  There might be a huge gap between the real net-value and the net-value derived from the simulated weights of stock in the portfolio occasionally, but they have a high spearman correlation most of the time. 
-- Buys and sells of portfolio manager should be chased. However, I suppose the ![](http://latex.codecogs.com/gif.latex?\\w_{i,t}) is constant. 
+- Buys and sells of portfolio manager should be chased. However, I suppose it stays constant. 
 
