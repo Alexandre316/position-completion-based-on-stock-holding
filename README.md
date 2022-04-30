@@ -2,7 +2,7 @@
 
 ## Data Description
 
-In China, a mutual fund reports are published seasonally. However, complete position would not be reported except annual report and semi annual report. In 1st and 3rd season, top 10 heavyweight stocks and industry distribution is the only information we can get. In some research (position chasing, invisible trading ability evaluation, etc), a complete position is must.
+In China, a mutual fund reports are published seasonally. However, complete position would not be reported except annual report and semi annual report. In 1st and 3rd season, top 10 heavyweight stocks and industry distribution is the only information we can get. **In some research (position chasing, invisible trading ability evaluation, etc), a complete position is must.**
 
 - IndValueToFundNAV:每期报告行业占基金净值比
 - ChinaMutualFundStockPortfolio:组合持仓的报告期数据
