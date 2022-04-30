@@ -35,9 +35,9 @@ In China, a mutual fund reports are published seasonally. However, complete posi
 
 Although some results are not satisfactory, most simulated NAVs are so similar to that of the real.
 
-![000083](./Output/NavBiasPlot/000083.png)
+![000083](https://github.com/Alexandre316/position-completion/tree/master/Output/NavBiasPlot/000083.png)
 
-![001039](C:\Users\93973\Desktop\工作文件\中信证券\18.持仓补全\Output\NavBiasPlot\001039.png)
+![001039](https://github.com/Alexandre316/position-completion/tree/master/Output/NavBiasPlot/001039.png)
 
 ## Defects and Improvements
 
