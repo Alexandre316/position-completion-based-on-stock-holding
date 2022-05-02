@@ -1,8 +1,10 @@
 # Position Completion Based on Stock Holding
 
-## Data Description
+## Why I did this?
 
 In China, a mutual fund reports are published seasonally. However, complete position would not be reported except annual report and semi annual report. In 1st and 3rd season, top 10 heavyweight stocks and industry distribution is the only information we can get. **In some research (position chasing, invisible trading ability evaluation, etc), a complete position is must.**
+
+## Data Description
 
 - IndValueToFundNAV:每期报告行业占基金净值比
 - ChinaMutualFundStockPortfolio:组合持仓的报告期数据
@@ -33,14 +35,14 @@ In China, a mutual fund reports are published seasonally. However, complete posi
 
 ## Compare the Real and Simulated NAV
 
-Although some results are not satisfactory, most simulated NAVs are so similar to that of the real.
+Although some results are not satisfactory, most simulated NAVs are so similar to that of the real. Spearman corr could be up to 0.95+ for many of portfolios.
 
-![000083](./Output/NavBiasPlot/000083.png)
-
+![000083](./Output/NavBiasPlot/000083.png)  
 ![001039](./Output/NavBiasPlot/001039.png)
 
 ## Defects and Improvements
 
 - We complete the position based on stocks only, which means other asset types are excluded (bonds, etc).  There might be a huge gap between the real net-value and the net-value derived from the simulated weights of stock in the portfolio occasionally, but they have a high spearman correlation most of the time. 
-- Buys and sells of portfolio manager should be chased. However, I suppose it stays constant. 
+- Buys and sells of portfolio manager should be chased. However, I suppose it stays constant. Industry chasing could be a possible improvement for this defect.
+- There is a seasonal reports publishment delay.
 
